@@ -1,55 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="cope tristin L">
-    <meta name="theme-color" content="#edb9d2">
-    <title>Temperature Converter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A joyful, accessible temperature converter for eight temperature scales.">
+  <meta name="theme-color" content="#8b5cf6">
+  <title>Pride Temperature Converter</title>
+  <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <h1>Temperature Converter, Made to irritate my friend</h1>
-    <label>Convert from:</label><br>
-    <input type="radio" id="fromCelsius" name="fromUnit">
-    <label>Celsius</label><br>
-    <input type="radio" id="fromFahrenheit" name="fromUnit">
-    <label>Fahrenheit</label><br>
-    <input type="radio" id="fromKelvin" name="fromUnit">
-    <label>Kelvin</label><br>
-    <input type="radio" id="fromRankine" name="fromUnit">
-    <label>Rankine</label><br>
-    <input type="radio" id="fromRomer" name="fromUnit">
-    <label>Rømer</label><br>
-    <input type="radio" id="fromReaumur" name="fromUnit">
-    <label>Réaumur</label><br>
-    <input type="radio" id="fromNewton" name="fromUnit">
-    <label>Newton</label><br>
-    <input type="radio" id="fromDelisle" name="fromUnit">
-    <label>Delisle</label><br><br>
+  <div class="sparkles" aria-hidden="true"></div>
+  <main class="app-shell">
+    <header class="hero">
+      <span class="eyebrow">🌈 Proudly precise</span>
+      <h1>Temperature, but make it <span>fabulous.</span></h1>
+      <p>Convert between eight temperature scales with a little color and a lot of sparkle.</p>
+    </header>
 
-    <label>Convert to:</label><br>
-    <input type="radio" id="toCelsius" name="toUnit">
-    <label>Celsius</label><br>
-    <input type="radio" id="toFahrenheit" name="toUnit">
-    <label>Fahrenheit</label><br>
-    <input type="radio" id="toKelvin" name="toUnit">
-    <label>Kelvin</label><br>
-    <input type="radio" id="toRankine" name="toUnit">
-    <label>Rankine</label><br>
-    <input type="radio" id="toRomer" name="toUnit">
-    <label>Rømer</label><br>
-    <input type="radio" id="toReaumur" name="toUnit">
-    <label>Réaumur</label><br>
-    <input type="radio" id="toNewton" name="toUnit">
-    <label>Newton</label><br>
-    <input type="radio" id="toDelisle" name="toUnit">
-    <label>Delisle</label><br><br>
+    <form class="converter" id="converter" novalidate>
+      <div class="field temperature-field">
+        <label for="temperature">Temperature</label>
+        <input id="temperature" name="temperature" type="number" step="any" inputmode="decimal" value="20" required>
+      </div>
 
-    <label>Enter a temperature</label>
-    <input type="text" id="textBox">
-    <button id="submitButton">Submit</button><br>
-    <label id="result"></label>
-    <script src="index.js"></script>
+      <div class="unit-grid">
+        <div class="field">
+          <label for="fromUnit">From</label>
+          <select id="fromUnit" name="fromUnit"></select>
+        </div>
+        <button class="swap" id="swap" type="button" aria-label="Swap temperature units" title="Swap units">⇄</button>
+        <div class="field">
+          <label for="toUnit">To</label>
+          <select id="toUnit" name="toUnit"></select>
+        </div>
+      </div>
+
+      <button class="convert" type="submit"><span>Convert</span><span aria-hidden="true">✨</span></button>
+
+      <section class="result" aria-live="polite" aria-atomic="true">
+        <span class="result-label">Result</span>
+        <strong id="result">68 °F</strong>
+        <span id="formula">20 °C equals 68 °F</span>
+      </section>
+    </form>
+
+    <footer>Made with <span aria-label="pride">🏳️‍🌈</span>, paws, and good math.</footer>
+  </main>
+  <script src="index.js"></script>
 </body>
 </html>
