@@ -1,9 +1,6 @@
 # Pride Temperature Converter
-## Temperature Converter buts its more GAY!!!~
-
-</div>
-
-
+</a>
+Temperature Converter buts its more GAY!!!~
 An accessible, responsive converter for Celsius, Fahrenheit, Kelvin, Rankine,
 Rømer, Réaumur, Newton, and Delisle. The interface includes a pride-inspired
 palette, custom paw cursor, subtle sparkles, live conversion, and reduced-motion
